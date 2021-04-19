@@ -260,10 +260,10 @@ class Header extends Component {
                                 <Link to="/shop">Product</Link>
                                 <ul className="dropdown">
                                   <li>
-                                    <Link to="/detail">Bag</Link>
+                                    <Link to="/bag">Bag</Link>
                                   </li>
                                   <li>
-                                    <Link to="/detail">Shoes</Link>
+                                    <Link to="/shose">Shoes</Link>
                                   </li>
                                 </ul>
                               </li>
@@ -301,7 +301,7 @@ class Header extends Component {
                                 <Link to="/shop">Admin</Link>
                                 <ul className="dropdown">
                                   <li>
-                                    <Link to="/detail">User & Employee</Link>
+                                    <Link to="/create">User & Employee</Link>
                                   </li>
                                   <li>
                                     <Link to="/detail">Products</Link>
@@ -311,6 +311,12 @@ class Header extends Component {
                                   </li>
                                   <li>
                                     <Link to="/detail">Orders list</Link>
+                                  </li>
+                                  <li>
+                                    <Link to="/register">Register Screen</Link>
+                                  </li>
+                                  <li>
+                                    <Link to="/login">Login Screen</Link>
                                   </li>
                                 </ul>
                               </li>

@@ -315,10 +315,10 @@ class Header extends Component {
                                 <Link to="/shop">Product</Link>
                                 <ul className="dropdown">
                                   <li>
-                                    <Link to="/detail">Bag</Link>
+                                    <Link to="/bag">Bag</Link>
                                   </li>
                                   <li>
-                                    <Link to="/detail">Shoes</Link>
+                                    <Link to="/shose">Shoes</Link>
                                   </li>
                                 </ul>
                               </li>
