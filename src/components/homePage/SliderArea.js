@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 class SliderArea extends Component {
   render() {
     return (
@@ -23,9 +23,9 @@ class SliderArea extends Component {
                             maboriosm.
                           </p>
                           <div className="button">
-                            <a href="#" className="btn">
+                            <Link to="/bag" className="btn">
                               Shop Now!
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>

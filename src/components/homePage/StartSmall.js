@@ -10,7 +10,10 @@ class StartSmall extends Component {
               {/* Single Banner  */}
               <div className="col-lg-4 col-md-6 col-12">
                 <div className="single-banner">
-                  <img src="https://via.placeholder.com/600x370" alt="#" />
+                  <img
+                    src="https://wpthemesgrid.com/themes/eshop/images/mini-banner1.jpg"
+                    alt="#"
+                  />
                   <div className="content">
                     <p>Man's Collectons</p>
                     <h3>
@@ -24,7 +27,10 @@ class StartSmall extends Component {
               {/* Single Banner  */}
               <div className="col-lg-4 col-md-6 col-12">
                 <div className="single-banner">
-                  <img src="https://via.placeholder.com/600x370" alt="#" />
+                  <img
+                    src="https://wpthemesgrid.com/themes/eshop/images/mini-banner2.jpg"
+                    alt="#"
+                  />
                   <div className="content">
                     <p>Bag Collectons</p>
                     <h3>
@@ -38,7 +44,10 @@ class StartSmall extends Component {
               {/* Single Banner  */}
               <div className="col-lg-4 col-12">
                 <div className="single-banner tab-height">
-                  <img src="https://via.placeholder.com/600x370" alt="#" />
+                  <img
+                    src="https://wpthemesgrid.com/themes/eshop/images/mini-banner3.jpg"
+                    alt="#"
+                  />
                   <div className="content">
                     <p>Flash Sale</p>
                     <h3>

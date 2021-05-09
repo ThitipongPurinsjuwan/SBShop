@@ -1,46 +1,44 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+
 import Header from "../components/otherPage/Header";
 import Breadcrumbs from "../components/otherPage/Breadcrumbs";
 import Footer from "../components/otherPage/Footer";
 import ShopSlider from "../components/otherPage/products/bag/ShopSlider";
-import BoxProduct from "../components/otherPage/products/bag/BoxProduct";
-import axios from "axios";
-import { Link, useParams } from "react-router-dom";
 
-function BagScreen() {
-  const [data, setData] = useState([]);
-  const [category, setCategory] = useState([]);
-  const [temp, setTemp] = useState([]);
-  let param = useParams();
-  let categoryId = -1;
-  if (param.category) {
-    categoryId = parseInt(param.category);
-  }
-  useEffect(() => {
-    axios
-      .get("http://localhost:1337/product?category_id=1")
-      .then((results) => {
-        setTemp(results.data.results);
-        setData(results.data.results);
-      })
-      .catch((err) => console.log(err));
+function ProductCategoirs() {
+  //   const [data, setData] = useState([]);
+  //   const [temp, setTemp] = useState([]);
+  //   const [category, setCategory] = useState([]);
+  //   useEffect(() => {
+  //     axios
+  //       .get("http://localhost:1337/product?category_id=1")
+  //       .then((results) => {
+  //         setData(results.data.results);
+  //         setTemp(results.data.results);
+  //       })
+  //       .catch((err) => console.log(err));
 
-    getCategories();
-  }, []);
+  //     getCategories();
+  //   }, []);
 
-  async function getCategories() {
-    await axios
-      .get("http://localhost:1337/categories_bag")
-      .then((results) => {
-        setCategory(results.data.results);
-      })
-      .catch((err) => console.log(err));
-  }
-
+  //   async function getCategories() {
+  //     await axios
+  //       .get("http://localhost:1337/categories_bag")
+  //       .then((results) => {
+  //         setCategory(results.data.results);
+  //       })
+  //       .catch((err) => console.log(err));
+  //   }
+  let { topicId } = useParams();
+  console.log("slug");
+  console.log(topicId);
   return (
     <>
-      <Header />
-      <Breadcrumbs to={"Bag"} />
+      <h2>test {topicId}</h2>
+      {/* <Header />
+      <Breadcrumbs to="Bag" />
       <section className="product-area shop-sidebar shop section">
         <div className="container">
           <div className="row">
@@ -117,22 +115,68 @@ function BagScreen() {
                 </div>
               </div>
               <div className="row">
-                {data
-                  .filter(
-                    (data) =>
-                      data.product_category === categoryId || categoryId === -1
-                  )
-                  .map((data, index) => (
-                    <BoxProduct data={data} />
-                  ))}
+                {data.map((data, index) => (
+                  <div className="col-lg-4 col-md-6 col-12">
+                    <div className="single-product">
+                      <div className="product-img">
+                        <Link to={"/detail?product_id=" + data.product_id}>
+                          <img
+                            className="default-img"
+                            src={data.product_img}
+                            alt="#"
+                          />
+                          <img
+                            className="hover-img"
+                            src={data.product_img}
+                            alt="#"
+                          />
+                        </Link>
+                        <div className="button-head">
+                          <div className="product-action">
+                            <Link
+                              data-toggle="modal"
+                              data-target="#exampleModal"
+                              title="Quick View"
+                              to={"/detail?product_id=" + data.product_id}
+                            >
+                              <i className=" ti-eye" />
+                              <span>Quick Shop</span>
+                            </Link>
+                            <Link title="Wishlist" to="#">
+                              <i className=" ti-heart " />
+                              <span>Add to Wishlist</span>
+                            </Link>
+                            <Link title="Compare" to="#">
+                              <i className="ti-bar-chart-alt" />
+                              <span>Add to Compare</span>
+                            </Link>
+                          </div>
+                          <div className="product-action-2">
+                            <Link title="Add to cart" to="#">
+                              Add to cart
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="product-content">
+                        <h3>
+                          <Link to="/detail">{data.product_name}</Link>
+                        </h3>
+                        <div className="product-price">
+                          <span>${data.product_price}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
 
-export default BagScreen;
+export default ProductCategoirs;

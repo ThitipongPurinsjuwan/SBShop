@@ -360,6 +360,11 @@ class Header extends Component {
                                     <Link to="/detail">User & Employee</Link>
                                   </li>
                                   <li>
+                                    <Link to="/createProduct">
+                                      Create Product
+                                    </Link>
+                                  </li>
+                                  <li>
                                     <Link to="/detail">Products</Link>
                                   </li>
                                   <li>
